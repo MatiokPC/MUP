@@ -10,6 +10,6 @@ jobs:
                     tinytex: true
             - run: pip install ipykernel nbclient matplotlib PyMPDATA
             - run: quarto render MUP_CWL_1.ipynb --to pdf --execute
-            - uses: actions/upload-artifact@v7
+            - uses: actions/upload_artifact@v7
               with:
                     path: MUP_CWL_1.pdf
