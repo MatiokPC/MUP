@@ -4,12 +4,12 @@ jobs:
     main:
         runs-on: ubuntu-latest
         steps:
-            -uses: actions/chechout@v7
-            -uses: quarto-dev/quarto-actions/setup@v2
-                with:
+            - uses: actions/chechout@v7
+            - uses: quarto-dev/quarto-actions/setup@v2
+              with:
                     tinytex: true
-            -run: pip install ipykernel nbclient matplotlib PyMPDATA
-            -run: quarto render MUP_CWL_1.ipynb --to pdf --execute
-            -uses: actions/upload-artifact@v7
-                with:
+            - run: pip install ipykernel nbclient matplotlib PyMPDATA
+            - run: quarto render MUP_CWL_1.ipynb --to pdf --execute
+            - uses: actions/upload-artifact@v7
+              with:
                     path: MUP_CWL_1.pdf
